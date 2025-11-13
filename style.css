@@ -1,0 +1,129 @@
+/* Sets global page styles */
+body {
+  text-align: center;
+  /* Deep, fiery background for a molten lava look */
+  background: 
+    radial-gradient(circle at 50% 100%, #300000 0%, transparent 80%), /* Bottom glow */
+    linear-gradient(to bottom, #111 0%, #000 100%); /* Main dark background */
+  font-family: 'Michroma', sans-serif;
+  color: #d1d1d1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Game title text: Molten Metal Effect */
+#level-title {
+  font-family: 'Michroma', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem; 
+  margin: 5vh 5%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  
+  color: #ffaa00; /* Gold/Orange core */
+  text-shadow:
+    0 0 5px #ffaa00, 
+    0 0 10px #ff6a00, 
+    0 0 20px #ff0000; /* Fiery glow around the text */
+}
+
+/* Centers the 4 buttons on the page */
+.container {
+  display: block;
+  width: 500px; 
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #222; /* Dark metal console */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff6a00; /* Subtle orange glow on the console */
+}
+
+/* Base button styling: Embossed Volcanic Rock */
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 2px solid #333;
+  border-radius: 15%; /* Rounded square */
+  cursor: pointer;
+  
+  /* Complex Embossed 3D effect: dark material with light highlights */
+  background-color: #222; 
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.9), /* Inner darkness */
+    0 8px 15px rgba(0, 0, 0, 0.6),
+    -5px -5px 10px rgba(70, 70, 70, 0.1); /* Top-left 'rock' highlight */
+    
+  transform: translateZ(0); 
+  filter: grayscale(80%); /* Resting state is cold, hard metal/rock */
+  transition: 
+    box-shadow 0.2s, 
+    transform 0.2s, 
+    filter 0.2s;
+}
+
+/* Screen flash effect when user loses: Superheated */
+.game-over {
+  background-color: #8B0000; /* Darker, intense red */
+  opacity: 1;
+  box-shadow: 0 0 150px #ff4500, inset 0 0 50px #ff0000;
+  filter: brightness(1.5);
+}
+
+/* Button Colors (Resting State - Just a hint of color under the grayscale) */
+.red { background-color: #540000; }
+.green { background-color: #004400; }
+.blue { background-color: #000055; }
+.yellow { background-color: #555500; }
+
+/* Visual effect when a button is pressed/lights up: MOLTEN CORE */
+.pressed {
+  /* Button is pushed flat */
+  transform: translateY(2px) scale(0.98); 
+  filter: grayscale(0%); /* Full color return */
+  
+  /* Layered, intense fiery glow (The stun factor) */
+  box-shadow:
+    0 0 5px 2px #fff,               /* Layer 1: White hot center */
+    0 0 20px 5px #ffa500,           /* Layer 2: Orange heat */
+    0 0 40px 10px #ff4500,          /* Layer 3: Deep red heat */
+    inset 0 0 10px 5px #fff;        /* Inner glow */
+}
+
+/* Setting the active color (used by currentColor in .pressed) */
+.pressed.red { color: #ff0077; background-color: #ff0077; }
+.pressed.green { color: #00ff77; background-color: #00ff77; }
+.pressed.blue { color: #0077ff; background-color: #0077ff; }
+.pressed.yellow { color: #ffff00; background-color: #ffff00; }
+
+/* --- Footer Styling: Forge Data --- */
+footer {
+    padding: 20px 0;
+    margin-top: auto; 
+}
+
+footer p{
+    color: #ffaa00; /* Gold/Orange text */
+    font-family: 'Michroma', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #ffaa00;
+}
+/* Icons (🔥 🛠️) */
+.forge-icon {
+    text-decoration: none;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 5px #ff6a00);
+    margin: 0 5px;
+}
+/* Name Highlight: Glowing Lava */
+.molten-data {
+    color: #ff4500; /* Red-Orange highlight */
+    font-weight: 700;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff0000;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8"> 
+  <!-- Essential viewport meta tag for mobile responsiveness and scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+
+  <!-- Link to the CSS file containing the Volcanic Forge styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main display font (Michroma) for an industrial, futuristic, and bold look -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Game title, updated dynamically as game progresses -->
+  <h1 id="level-title">PRESS ANY KEY TO START</h1>
+
+  <!-- Main container for the 4 color buttons -->
+  <div class="container">
+    <div class="row">
+      <!-- Each color pad represents a button with a specific ID -->
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+    </div>
+
+    <div class="row">
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+      <p><a class="forge-icon"></a> Created by <a class="forge-icon">🛠️</a> the Hand of <span class="molten-data">Chetan krishna</span></p>
+  </footer>
+
+  <!-- Import jQuery library for easier DOM manipulation -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Link to the main game logic (assuming this is your existing game.js file) -->
+  <script src="game.js" charset="utf-8"></script>
+
+</body>
+</html>
